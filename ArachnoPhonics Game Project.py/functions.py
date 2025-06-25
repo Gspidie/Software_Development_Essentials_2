@@ -72,7 +72,7 @@ def print_spider(tries,spiderList):
 def generate_word():
   wordList = open('/workspaces/SDE2-python-env-starter-GSP/ArachnoPhonics Game Project.py/words.txt').read().split()
   word = random.choice(wordList)
-  print('Word = ' + '_'*len(word))
+  #print('Word = ' + '_'*len(word))
   return word
 
 # Returns True if user's guess is already in incorrect or correct list
@@ -85,10 +85,13 @@ def print_wrong_guesses(incorrectGuesses):
 
 #Put the introduction code/input player name into here 
 def introduction():
+  print("")
+  print("")
   print("Welcome to ArachnoPhonics! \n")
   userName = input("What is your name? \n")
   print(f'{userName}, your goal is to guess the word, letter by letter. \n')
   print("Do not let the spider get you! \n")
+  
 
 def won_game(word, correctGuesses):
   for letter in word:
@@ -100,6 +103,22 @@ def won_game(word, correctGuesses):
 
 def lost_game(tries):
   return tries == 6
-      
+
+def victory_drawing():
+  print(f"################################################################")
+  print(f"#       ____       ______      ______                ___       #")
+  print(f"#      /    |     /      \    /      \              /  /       #")
+  print(f"#     /__   |    |   __   |  |   __   |    ___     /  /        #")
+  print(f"#       |   |    |  |  |  |  |  |  |  |   |   |   /  /         #")
+  print(f"#       |   |    |  |  |  |  |  |  |  |   |___|  /  /  ___     #")
+  print(f"#       |   |    |  |__|  |  |  |__|  |         /  /  |   |    #")
+  print(f"#     __|   |__  |        |  |        |        /  /   |___|    #")
+  print(f"#    |_________|  \______/    \______/        /__/             #")
+  print(f"#                                                              #")
+  print(f"################################################################")
+
+
+
+
 
   
